@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "files.encoding": "utf8",
+    "files.eol": "\n"
+}
