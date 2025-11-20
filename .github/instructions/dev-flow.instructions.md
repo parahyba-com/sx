@@ -10,13 +10,14 @@ applyTo: '**'
 
 - **NEVER commit directly to `master`**: All changes must go through a branch and PR workflow
 - **Always create an issue first** to describe the feature, bug, or task
-- Create a branch from the default branch (usually `master`)
+  - Use the `#github` tool to create, read, and manage issues on GitHub
+- **Create branch LOCALLY using terminal commands** (not GitHub tools)
 - **Branch name must reference the issue**: `<issue-number>-short-description`
   - Example: `123-add-user-authentication`, `456-fix-login-bug`, `789-update-docs`
 - The branch creates an isolated space to work without affecting the main code
 - Allows collaborators to review your work before integration
 
-**Command:**
+**Command (use terminal):**
 ```bash
 git checkout -b <issue-number>-branch-name
 ```
@@ -30,6 +31,7 @@ git checkout -b 123-add-oauth-login
 
 - Work on your branch making the necessary changes
 - **Frequent and descriptive commits**: each commit should represent an isolated and complete change
+- **ALL commits must be done LOCALLY using git commands in terminal** (not GitHub tools)
 - Follow **Conventional Commits** as specified below
 
 #### Commit Format (Conventional Commits)
@@ -101,7 +103,7 @@ feat(api)!: remove deprecated endpoints
 BREAKING CHANGE: v1 endpoints no longer available
 ```
 
-**Commands:**
+**Commands (use terminal for all git operations):**
 ```bash
 git add .
 git commit -m "type(scope): subject"
@@ -112,6 +114,7 @@ git push origin branch-name
 - Small and frequent commits (continuous backup)
 - Separate branch for each set of unrelated changes
 - Regular push to remote (backup and team visibility)
+- **All git operations (add, commit, push) must be done in terminal**
 
 ### 3. Create a Pull Request (PR)
 
@@ -119,6 +122,7 @@ git push origin branch-name
   - Every PR must be linked to an issue that describes the problem/feature
   - If no issue exists, create one first before proceeding with the PR
   - The issue number should already be part of your branch name from step 1
+- **Use `#github` tool to create, read, and manage Pull Requests** (this is beyond local git)
 - Open a PR when you want feedback or when changes are ready
 - Mark as **Draft** if still in progress
 - Include in the PR:
