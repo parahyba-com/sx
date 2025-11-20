@@ -1,0 +1,93 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Please fill in the information below to help us understand your proposal.
+
+  - type: checkboxes
+    id: existing-feature
+    attributes:
+      label: Has this feature been requested before?
+      description: Please search existing issues before creating a new one.
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Clearly describe the feature you would like to see implemented.
+      placeholder: Describe the desired feature...
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation and Use Cases
+      description: Explain why this feature is important and how it will be used.
+      placeholder: |
+        Why is this feature needed?
+        What problems does it solve?
+        How do you intend to use it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: If you have an idea of how to implement it, describe it here.
+      placeholder: How do you envision this feature working?
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered other alternatives or solutions? Describe them here.
+      placeholder: What other approaches have you considered?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How would you rate the priority of this feature?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 0
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact
+      description: Select the areas that will be impacted by this feature.
+      options:
+        - label: User Interface (UI)
+        - label: API / Backend
+        - label: Documentation
+        - label: Tests
+        - label: Performance
+        - label: Security
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add screenshots, mockups, links, or any other relevant information.
+      placeholder: Links, images, mockups, examples from other projects...
+    validations:
+      required: false

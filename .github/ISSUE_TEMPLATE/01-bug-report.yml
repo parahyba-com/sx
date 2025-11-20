@@ -1,0 +1,81 @@
+name: Bug Report
+description: Report a bug or issue in the project
+title: "[Bug]: "
+labels: ["bug"]
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please fill in the information below to help us understand and resolve the issue.
+
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Does this issue already exist?
+      description: Please search existing issues before creating a new one.
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: Describe what is currently happening.
+      placeholder: What are you observing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what should be happening.
+      placeholder: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps to reproduce the issue.
+      placeholder: |
+        1. Go to page '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Information about the environment where the bug occurred.
+      placeholder: |
+        - OS: Windows 11 / macOS 14 / Ubuntu 22.04
+        - Browser: Chrome 120 / Firefox 121 / Safari 17
+        - Node.js: 22.0.0
+        - Next.js: 16.0.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Logs
+      description: If applicable, add relevant screenshots or logs. You can drag and drop files here.
+      placeholder: Paste screenshots, logs, or other relevant files here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help understand the issue.
+      placeholder: Links, references, or any additional context...
+    validations:
+      required: false

@@ -1,0 +1,90 @@
+name: Support / Question
+description: Ask a question or request help
+title: "[Support]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for seeking help! Please fill in the information below so we can assist you better.
+        
+        For general questions about the project, consider using [Discussions](https://github.com/parahyba-com/sx/discussions) instead of opening an issue.
+
+  - type: checkboxes
+    id: documentation-checked
+    attributes:
+      label: Have you checked the documentation?
+      description: Please verify if your question has already been answered in the documentation.
+      options:
+        - label: I have read the available documentation
+          required: true
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: Question Type
+      description: Select the type of your question.
+      options:
+        - How-to
+        - Configuration
+        - Error / Problem
+        - Best practice
+        - Concept / Understanding
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Describe your question clearly and objectively.
+      placeholder: What would you like to know?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide additional context about your situation or problem.
+      placeholder: |
+        What are you trying to do?
+        What is the scenario?
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What have you tried?
+      description: List the approaches you have already tried and the results obtained.
+      placeholder: |
+        1. I tried...
+        2. Then I tried...
+        3. Result was...
+    validations:
+      required: false
+
+  - type: textarea
+    id: code-example
+    attributes:
+      label: Code Example (if applicable)
+      description: If relevant, provide a code example related to your question.
+      placeholder: |
+        ```typescript
+        // Your code here
+        ```
+      render: typescript
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other information that might be helpful.
+      placeholder: Links, screenshots, package versions, etc.
+    validations:
+      required: false
