@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/parahyba-com/sx
+    about: Check the project documentation
+  - name: 💬 Discussions
+    url: https://github.com/parahyba-com/sx/discussions
+    about: For general questions and discussions, use the Discussions area
+  - name: 🔒 Report Security Vulnerability
+    url: https://github.com/parahyba-com/sx/security/advisories/new
+    about: To report security vulnerabilities privately
