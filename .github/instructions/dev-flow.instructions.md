@@ -1,5 +1,5 @@
 ---
-applyTo: '**'
+applyTo: "**"
 ---
 
 # HOW TO DEVELOP
@@ -18,11 +18,13 @@ applyTo: '**'
 - Allows collaborators to review your work before integration
 
 **Command (use terminal):**
+
 ```bash
 git checkout -b <issue-number>-branch-name
 ```
 
 **Example:**
+
 ```bash
 git checkout -b 123-add-oauth-login
 ```
@@ -45,6 +47,7 @@ git checkout -b 123-add-oauth-login
 ```
 
 **Valid commit types:**
+
 - **feat**: A new feature for the user (correlates with MINOR in SemVer)
 - **fix**: A bug fix for the user (correlates with PATCH in SemVer)
 - **docs**: Documentation only changes
@@ -61,6 +64,7 @@ git checkout -b 123-add-oauth-login
 Indicate the affected area: `ui`, `api`, `auth`, `db`, `config`, etc.
 
 **Subject Rules:**
+
 - Use imperative mood: "add", not "added" or "adds"
 - Must be lowercase (not Start-Case, PascalCase, UPPERCASE, or Sentence case)
 - No period at the end
@@ -68,6 +72,7 @@ Indicate the affected area: `ui`, `api`, `auth`, `db`, `config`, etc.
 - One commit = one logical change (facilitates reversions)
 
 **Correct examples:**
+
 ```bash
 feat(auth): add OAuth login support
 fix(ui): resolve mobile menu overflow
@@ -77,6 +82,7 @@ perf(db): optimize query with index
 ```
 
 **Incorrect examples:**
+
 ```bash
 Added new feature
 Fixed stuff
@@ -86,17 +92,20 @@ changes
 ```
 
 **Body (Optional):**
+
 - Explain **what** and **why**, not **how**
 - Maximum 100 characters per line
 - Separate from subject with a blank line
 
 **Footer (Optional):**
+
 - Reference issues: `Closes #123` or `Fixes #456`
 - Note breaking changes: `BREAKING CHANGE: ...`
 - Maximum 100 characters per line
 
 **Breaking changes:**
 Use `!` after type/scope or add `BREAKING CHANGE:` in the footer:
+
 ```bash
 feat(api)!: remove deprecated endpoints
 
@@ -104,6 +113,7 @@ BREAKING CHANGE: v1 endpoints no longer available
 ```
 
 **Commands (use terminal for all git operations):**
+
 ```bash
 git add .
 git commit -m "type(scope): subject"
@@ -111,6 +121,7 @@ git push origin branch-name
 ```
 
 **Important practices:**
+
 - Small and frequent commits (continuous backup)
 - Separate branch for each set of unrelated changes
 - Regular push to remote (backup and team visibility)
@@ -135,6 +146,7 @@ git push origin branch-name
 - Request specific reviewers or teams with `@mention`
 
 **Automatic checks:**
+
 - CI/CD pipelines will run
 - Automated tests
 - Linters and formatters
@@ -150,6 +162,7 @@ git push origin branch-name
 - Mark conversations as resolved after implementing changes
 
 **Review cycle:**
+
 ```
 Commit → Push → Review → Adjustments → Commit → Push → Approval
 ```
@@ -164,6 +177,7 @@ Commit → Push → Review → Adjustments → Commit → Push → Approval
 - Respect branch protection rules (minimum number of approvals, etc.)
 
 **Merge types (prefer rebase):**
+
 - **Rebase and merge** (PREFERRED): reapplies commits linearly, keeps clean history
 - **Squash and merge**: consolidates commits into one (use for messy commit history)
 - **Merge commit**: keeps all commits (avoid when possible, creates merge commits)
@@ -176,11 +190,13 @@ Commit → Push → Review → Adjustments → Commit → Push → Approval
 - Keeps the repository organized
 
 **Don't worry:**
+
 - PR history and commits are not lost
 - You can restore the branch if needed
 - You can revert the PR if something goes wrong
 
 **Command (after merge):**
+
 ```bash
 git branch -D branch-name
 git push origin --delete branch-name

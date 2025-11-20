@@ -1,6 +1,6 @@
 ---
 agent: agent
-tools: ['runCommands', 'github/*', 'changes']
+tools: ["runCommands", "github/*", "changes"]
 ---
 
 YOU MUST FOLLOW THE PROJECT'S GUIDELINES/INSTRUCTIONS.
