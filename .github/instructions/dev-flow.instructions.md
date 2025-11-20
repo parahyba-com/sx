@@ -182,7 +182,7 @@ Commit → Push → Review → Adjustments → Commit → Push → Approval
 
 **Command (after merge):**
 ```bash
-git branch -d branch-name
+git branch -D branch-name
 git push origin --delete branch-name
 ```
 
